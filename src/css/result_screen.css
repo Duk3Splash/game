@@ -1,0 +1,172 @@
+.result-screen {
+  min-height: 100vh;
+  background-color: #f0f2f5;
+  padding: 20px;
+}
+
+.result-title {
+  text-align: center;
+  font-size: 2.5rem;
+  margin: 30px 0;
+  text-shadow: 1px 1px 3px rgba(0, 0, 0, 0.2);
+}
+
+.result-title.win {
+  color: #4caf50;
+}
+
+.result-title.lose {
+  color: #f44336;
+}
+
+.result-title.draw {
+  color: #ff9800;
+}
+
+.result-details {
+  background-color: white;
+  border-radius: 10px;
+  padding: 30px;
+  box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+  max-width: 900px;
+  margin: 0 auto;
+}
+
+.compared-attribute {
+  text-align: center;
+  font-size: 1.2rem;
+  color: #555;
+  margin-bottom: 30px;
+  font-weight: bold;
+}
+
+.cards-comparison {
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-start;
+  margin-bottom: 40px;
+}
+
+.player-side, .opponent-side {
+  flex: 1;
+  text-align: center;
+}
+
+.player-side h3, .opponent-side h3 {
+  margin-top: 0;
+  color: #555;
+  margin-bottom: 20px;
+}
+
+.vs-indicator {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 1.5rem;
+  font-weight: bold;
+  color: #777;
+  margin: 0 30px;
+}
+
+.score-update {
+  background-color: #f8f9fa;
+  border-radius: 8px;
+  padding: 20px;
+  text-align: center;
+  margin-top: 30px;
+}
+
+.score-update h3 {
+  margin-top: 0;
+  color: #555;
+  margin-bottom: 15px;
+}
+
+.score-display {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-size: 1.5rem;
+  font-weight: bold;
+}
+
+.score-display .you {
+  color: #1a2a6c;
+}
+
+.score-display .opponent {
+  color: #b21f1f;
+}
+
+.score-display .divider {
+  margin: 0 15px;
+  color: #777;
+}
+
+.continue-prompt {
+  text-align: center;
+  margin-top: 30px;
+}
+
+.continue-prompt p {
+  color: #777;
+  font-style: italic;
+  margin-bottom: 15px;
+}
+
+.countdown-timer {
+  width: 50px;
+  height: 50px;
+  margin: 0 auto;
+  border-radius: 50%;
+  border: 5px solid #1a2a6c;
+  border-left-color: transparent;
+  animation: countdown-spin 5s linear forwards;
+}
+
+@keyframes countdown-spin {
+  0% {
+    transform: rotate(0deg);
+  }
+  100% {
+    transform: rotate(360deg);
+  }
+}
+
+.stat-row.highlighted {
+  background-color: #f8f9fa;
+  border-radius: 5px;
+  padding: 8px 10px;
+  margin: 5px 0;
+  border-left: 3px solid #1a2a6c;
+  font-weight: bold;
+}
+
+.loading {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  min-height: 100vh;
+  font-size: 1.2rem;
+  color: #555;
+}
+
+@media (max-width: 768px) {
+  .cards-comparison {
+    flex-direction: column;
+    align-items: center;
+  }
+  
+  .player-side, .opponent-side {
+    margin-bottom: 30px;
+    width: 100%;
+  }
+  
+  .vs-indicator {
+    margin: 20px 0;
+  }
+  
+  .result-title {
+    font-size: 2rem;
+  }
+}
