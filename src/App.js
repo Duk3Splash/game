@@ -218,6 +218,7 @@ const joinGame = (gameId) => {
                 opponentCard={gameState.opponentSelectedCard}
                 attribute={gameState.currentAttribute}
                 onFinishView={resetRoundState}
+                totalCards={gameState.playerCards}
               />
             }
           />
