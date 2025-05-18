@@ -21,7 +21,7 @@ const App = () => {
     currentAttribute: null,
     turn: null,
     result: null,
-    score: { player: 0, opponent: 0 },
+    health: { player: 100, opponent: 100 },
     roundsPlayed: 0,
   });
 
@@ -38,16 +38,18 @@ const App = () => {
     });
 
     newSocket.on('game_created', (data) => {
+      console.log('duk3 game_created ..... ', data);
       setGameState(prevState => ({
         ...prevState,
         isInGame: true,
         gameId: data.gameId,
         playerId: data.playerId,
+        turn: data.turn,
       }));
     });
 
     newSocket.on('game_joined', (data) => {
-      console.count('duk3 ,.........., rajat');
+      console.count('duk3 game_joined ......', data);
       setGameState(prevState => ({
         ...prevState,
         isInGame: true,
@@ -55,10 +57,12 @@ const App = () => {
         playerId: data.playerId,
         opponentId: data.opponentId,
         playerCards: data.cards,
+        turn: data.turn,
       }));
     });
 
     newSocket.on('opponent_selected_card', (data) => {
+      console.log('duk3 opponent_selected_card ......', data);
       setGameState(prevState => ({
         ...prevState,
         opponentSelectedCard: data.card,
@@ -80,9 +84,10 @@ const App = () => {
       setGameState((prevState) => ({
         ...prevState,
         result: data.result,
-        score: data.score,
+        health: data.health,
         turn: data.nextTurn,
         roundsPlayed: prevState.roundsPlayed + 1,
+        playerCards: data.cards
         // Don't clear these until after showing result screen
         // We'll clear them after navigating back from result
       }));
@@ -208,7 +213,7 @@ const joinGame = (gameId) => {
             element={
               <ResultScreen
                 result={gameState.result}
-                score={gameState.score}
+                health={gameState.health}
                 playerCard={gameState.selectedCard}
                 opponentCard={gameState.opponentSelectedCard}
                 attribute={gameState.currentAttribute}

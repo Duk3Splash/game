@@ -22,7 +22,7 @@
   flex-grow: 1;
 }
 
-.game-score {
+.game-health {
   display: flex;
   align-items: center;
   background-color: rgba(255, 255, 255, 0.15);
@@ -30,22 +30,22 @@
   border-radius: 20px;
 }
 
-.score-item {
+.health-item {
   display: flex;
   align-items: center;
 }
 
-.score-label {
+.health-label {
   font-weight: bold;
   margin-right: 5px;
 }
 
-.score-value {
+.health-value {
   font-size: 1.2rem;
   font-weight: bold;
 }
 
-.score-divider {
+.health-divider {
   margin: 0 10px;
   font-weight: bold;
 }
@@ -94,7 +94,7 @@
 
 .your-card h3, .opponent-card h3 {
   margin-top: 0;
-  color: #555;
+  color: #fff;
 }
 
 .selected-card-display {
@@ -103,7 +103,7 @@
 }
 
 .selected-card-display h3 {
-  color: #555;
+  color: #fff;
   margin-bottom: 15px;
 }
 

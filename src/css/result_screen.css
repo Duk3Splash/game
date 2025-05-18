@@ -54,7 +54,7 @@
 
 .player-side h3, .opponent-side h3 {
   margin-top: 0;
-  color: #555;
+  color: #fff;
   margin-bottom: 20px;
 }
 
@@ -68,7 +68,7 @@
   margin: 0 30px;
 }
 
-.score-update {
+.health-update {
   background-color: #f8f9fa;
   border-radius: 8px;
   padding: 20px;
@@ -76,13 +76,13 @@
   margin-top: 30px;
 }
 
-.score-update h3 {
+.health-update h3 {
   margin-top: 0;
   color: #555;
   margin-bottom: 15px;
 }
 
-.score-display {
+.health-display {
   display: flex;
   justify-content: center;
   align-items: center;
@@ -90,15 +90,15 @@
   font-weight: bold;
 }
 
-.score-display .you {
+.health-display .you {
   color: #1a2a6c;
 }
 
-.score-display .opponent {
+.health-display .opponent {
   color: #b21f1f;
 }
 
-.score-display .divider {
+.health-display .divider {
   margin: 0 15px;
   color: #777;
 }

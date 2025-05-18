@@ -164,15 +164,15 @@ const GameScreen = ({ gameState, selectCard, selectAttribute }) => {
     <div className="game-screen">
       <div className="game-header">
         <h1>Cricket Card Game</h1>
-        <div className="game-score">
-          <div className="score-item">
-            <span className="score-label">You:</span>
-            <span className="score-value">{gameState.score.player}</span>
+        <div className="game-health">
+          <div className="health-item">
+            <span className="health-label">You:</span>
+            <span className="health-value">{gameState.health.player}</span>
           </div>
-          <div className="score-divider">-</div>
-          <div className="score-item">
-            <span className="score-label">Opponent:</span>
-            <span className="score-value">{gameState.score.opponent}</span>
+          <div className="health-divider">-</div>
+          <div className="health-item">
+            <span className="health-label">Opponent:</span>
+            <span className="health-value">{gameState.health.opponent}</span>
           </div>
         </div>
         <div className="round-info">

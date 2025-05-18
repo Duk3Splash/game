@@ -2,11 +2,11 @@ import React, { useEffect } from 'react';
 import { useNavigate } from 'react-router-dom';
 import '../css/result_screen.css';
 
-const ResultScreen = ({ result, score, playerCard, opponentCard, attribute, onFinishView }) => {
+const ResultScreen = ({ result, health, playerCard, opponentCard, attribute, onFinishView }) => {
   const navigate = useNavigate();
 
   useEffect(() => {
-    console.log("ResultScreen mounted with props:", { result, score, playerCard, opponentCard, attribute });
+    console.log("ResultScreen mounted with props:", { result, health, playerCard, opponentCard, attribute });
     
     if (!result || !playerCard || !opponentCard || !attribute) {
       console.error("Missing required props for ResultScreen:", { result, playerCard, opponentCard, attribute });
@@ -123,12 +123,12 @@ const ResultScreen = ({ result, score, playerCard, opponentCard, attribute, onFi
           </div>
         </div>
         
-        <div className="score-update">
+        <div className="health-update">
           <h3>Current Score</h3>
-          <div className="score-display">
-            <span className="you">You: {score.player}</span>
+          <div className="health-display">
+            <span className="you">You: {health.player}</span>
             <span className="divider">-</span>
-            <span className="opponent">Opponent: {score.opponent}</span>
+            <span className="opponent">Opponent: {health.opponent}</span>
           </div>
         </div>
       </div>
