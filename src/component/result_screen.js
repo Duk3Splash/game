@@ -38,7 +38,7 @@ const ResultScreen = ({
     // Auto-redirect back to game after showing result
     const timeout = setTimeout(() => {
       console.log("Timeout triggered, navigating back to game");
-      if((totalCards && totalCards.length == 8) || (health.player === 0 || health.opponent === 0)){
+      if((totalCards && totalCards.length == 0) || (health.player === 0 || health.opponent === 0)){
         setKO(true);
       }
       else{

@@ -257,3 +257,136 @@
     margin-bottom: 20px;
   }
 }
+
+
+/* Add to styles/GameScreen.css */
+
+.mode-and-round {
+  display: flex;
+  align-items: center;
+  gap: 15px;
+}
+
+.mode-dropdown-container {
+  position: relative;
+}
+
+.mode-dropdown-toggle {
+  background-color: rgba(255, 255, 255, 0.15);
+  color: white;
+  border: none;
+  padding: 8px 15px;
+  border-radius: 20px;
+  cursor: pointer;
+  font-weight: bold;
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  transition: background-color 0.2s;
+}
+
+.mode-dropdown-toggle:hover {
+  background-color: rgba(255, 255, 255, 0.25);
+}
+
+.mode-dropdown-toggle:disabled {
+  opacity: 0.5;
+  cursor: not-allowed;
+}
+
+.active-mode-icon {
+  font-size: 1.2em;
+}
+
+.dropdown-arrow {
+  font-size: 0.8em;
+  transition: transform 0.2s;
+}
+
+.mode-dropdown-toggle:hover .dropdown-arrow {
+  transform: translateY(2px);
+}
+
+.mode-dropdown {
+  position: absolute;
+  top: calc(100% + 5px);
+  right: 0;
+  background-color: white;
+  border-radius: 8px;
+  box-shadow: 0 5px 15px rgba(0, 0, 0, 0.2);
+  width: 200px;
+  z-index: 100;
+  overflow: hidden;
+}
+
+.dropdown-header {
+  padding: 10px 15px;
+  background-color: #f0f2f5;
+  font-weight: bold;
+  color: #333;
+  border-bottom: 1px solid #e0e0e0;
+}
+
+.dropdown-item {
+  padding: 12px 15px;
+  cursor: pointer;
+  transition: background-color 0.2s;
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  color: black;
+}
+
+.dropdown-item:hover {
+  background-color: #f0f7ff;
+}
+
+.dropdown-item .mode-icon {
+  font-size: 1.2em;
+}
+
+.dropdown-footer {
+  padding: 10px;
+  display: flex;
+  justify-content: flex-end;
+  border-top: 1px solid #e0e0e0;
+}
+
+.dropdown-cancel {
+  padding: 5px 10px;
+  border: none;
+  background-color: #e0e0e0;
+  border-radius: 4px;
+  cursor: pointer;
+}
+
+.dropdown-cancel:hover {
+  background-color: #d0d0d0;
+}
+
+.dropdown-message {
+  padding: 15px;
+  color: #777;
+  text-align: center;
+  font-style: italic;
+}
+
+/* Adjust game-header layout for the new dropdown */
+.game-header {
+  display: grid;
+  grid-template-columns: 1fr auto auto;
+  align-items: center;
+  gap: 20px;
+}
+
+/* Media query for mobile */
+@media (max-width: 768px) {
+  .game-header {
+    grid-template-columns: 1fr;
+    grid-template-rows: auto auto auto;
+  }
+  
+  .mode-and-round {
+    justify-content: space-between;
+  }
+}
